@@ -3,6 +3,11 @@
 Welcome to my repository for **CISC 3130: Data Structures**.  
 This course focuses on core data structures, algorithms, and problem-solving techniques used in computer science.
 
+![Language](https://img.shields.io/badge/Language-Java-blue)
+![Course](https://img.shields.io/badge/Course-CISC%203130-green)
+![Topic](https://img.shields.io/badge/Focus-Data%20Structures-orange)
+
+
 ---
 
 ## 👨‍💻 About This Repository
@@ -22,3 +27,4 @@ You’ll find implementations, examples, and exercises covering topics such as:
 - Big-O Time Complexity  
 
 ---
+
