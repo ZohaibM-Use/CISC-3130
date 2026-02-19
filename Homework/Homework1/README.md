@@ -17,11 +17,6 @@ Run InventorySystemMain.java
 
 ## 📂 Classes Overview
 
-### `GenericContainer<T>`
-A generic wrapper around `Vector<T>` with utility methods:
-- `add(T item)`, `get(int index)`, `remove(T item)`
-- `size()`, `getAll()`, `clear()`, `contains(T item)`, `addAll(Vector<T> other)`
-
 ### `InventorySystemMain`
 The main class with the **menu system**:
 - Add, remove, find, and list products
@@ -69,6 +64,11 @@ Utility class with **generic Vector operations**:
 - `swap`, `findMax`, `countMatches`, `filter`
 - Filter products by category
 - Numeric methods: `sumNumbers`, `averageNumbers`
+
+### `GenericContainer<T>`
+A generic wrapper around `Vector<T>` with utility methods:
+- `add(T item)`, `get(int index)`, `remove(T item)`
+- `size()`, `getAll()`, `clear()`, `contains(T item)`, `addAll(Vector<T> other)`
 
 ### `VectorComparisonDemo`
 Compares **Vector** and **ArrayList** performance:
