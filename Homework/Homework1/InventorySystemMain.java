@@ -1,5 +1,6 @@
 package Homework.Homework1;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -10,7 +11,7 @@ public class InventorySystemMain {
         OrderManager orderManager = new OrderManager();
 
         int option = 1;
-        while (option>=1 && option<9){
+        while (option!=9){
             System.out.println("=== Menu System ===");
             System.out.println("1. Add Product\n" +
                     "2. Remove Product\n" +
@@ -22,8 +23,16 @@ public class InventorySystemMain {
                     "8. Generate Reports\n" +
                     "9. Exit");
             System.out.print("Choose an option: ");
-            option = sc.nextInt();
-            sc.nextLine();
+            while (true) {
+                try {
+                    option = sc.nextInt();
+                    sc.nextLine();
+                    break;
+                } catch (InputMismatchException e) {
+                    System.out.print("Invalid input! Please enter a number: ");
+                    sc.nextLine();
+                }
+            }
             System.out.println();
 
             switch (option){
@@ -43,6 +52,10 @@ public class InventorySystemMain {
                 break;
                 case 8: generateReports(sc, productInventory);
                 break;
+                case 9: System.exit(0);
+                break;
+                default:
+                    System.out.println("Invalid Option.");
             }
         }
     }
@@ -104,8 +117,17 @@ public class InventorySystemMain {
                     "2. All products in a category\n" +
                     "3. Low stock Products");
             System.out.print("Enter Option: ");
-            int option = sc.nextInt();
-            sc.nextLine();
+            int option;
+            while (true) {
+                try {
+                    option = sc.nextInt();
+                    sc.nextLine();
+                    break;
+                } catch (InputMismatchException e) {
+                    System.out.print("Invalid input! Please enter a number: ");
+                    sc.nextLine();
+                }
+            }
 
             switch (option) {
                 case 1:
@@ -126,7 +148,7 @@ public class InventorySystemMain {
                     do {
                         System.out.print("Enter category to search for: ");
                         Vector<Product> productsByCategory = productInventory.getProductsByCategory(sc.nextLine());
-                        if (productsByCategory != null)
+                        if (!productsByCategory.isEmpty())
                             for (Product product : productsByCategory) System.out.println(product);
                         else System.out.println("No products in this category!");
 
@@ -156,19 +178,21 @@ public class InventorySystemMain {
                         sc.nextLine();
                     } while (keepLooking);
                     break;
+                default:
+                    System.out.println("Invalid Option.");
             }
-            System.out.println("Return to Find Product Menu? (Y/N): ");
+            System.out.print("Return to Find Product Menu? (Y/N): ");
             finishedFindingProduct = sc.nextLine().equalsIgnoreCase("y");
             System.out.println();
-        }while (finishedFindingProduct);
+        } while (finishedFindingProduct);
         System.out.println();
     }
 
     public static void listAllProducts(Scanner sc, ProductInventory productInventory){
-        System.out.println("Currently " + productInventory.getTotalProducts() + " products" +
+        System.out.println("Currently " + productInventory.getTotalProducts() + " products " +
                 "in inventory\n");
         productInventory.printAllProducts();
-        System.out.printf("Current Inventory Value: $%,.2f%n", productInventory.getTotalInventoryValue());
+        System.out.printf("%nCurrent Inventory Value: $%,.2f%n", productInventory.getTotalInventoryValue());
         System.out.println();
     }
 
@@ -237,8 +261,17 @@ public class InventorySystemMain {
                     "3. View Orders By Status\n" +
                     "4. View Orders By Customer Name");
             System.out.print("Choose option: ");
-            int option = sc.nextInt();
-            sc.nextLine();
+            int option;
+            while (true) {
+                try {
+                    option = sc.nextInt();
+                    sc.nextLine();
+                    break;
+                } catch (InputMismatchException e) {
+                    System.out.print("Invalid input! Please enter a number: ");
+                    sc.nextLine();
+                }
+            }
 
             switch (option) {
                 case 1:
@@ -280,8 +313,17 @@ public class InventorySystemMain {
                     "5. View total of specific order\n" +
                     "6. View revenue earned from delivered orders");
             System.out.print("Choose option: ");
-            int option = sc.nextInt();
-            sc.nextLine();
+            int option;
+            while (true) {
+                try {
+                    option = sc.nextInt();
+                    sc.nextLine();
+                    break;
+                } catch (InputMismatchException e) {
+                    System.out.print("Invalid input! Please enter a number: ");
+                    sc.nextLine();
+                }
+            }
 
             switch (option) {
                 case 1:
@@ -374,8 +416,17 @@ public class InventorySystemMain {
         System.out.println("1. Product Inventory Capacity Report\n" +
                 "2. Vector vs ArrayList Comparison Report");
         System.out.print("Choose option: ");
-        int option = sc.nextInt();
-        sc.nextLine();
+        int option;
+        while (true) {
+            try {
+                option = sc.nextInt();
+                sc.nextLine();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.print("Invalid input! Please enter a number: ");
+                sc.nextLine();
+            }
+        }
 
         switch (option){
             case 1: productInventory.printCapacityReport();

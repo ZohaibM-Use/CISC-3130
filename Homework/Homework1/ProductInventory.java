@@ -85,10 +85,14 @@ public class ProductInventory {
 
     //prints all products in a formatted table
     void printAllProducts(){
-        System.out.printf("%-10s | %-20s | %-15s | %9s | %8s | %-15s%n",
-                "ProductID", "Name", "Category", "Price", "Quantity", "Supplier");
-        System.out.println("--------------------------------------------------------------------------------------------");
-        products.forEach(p -> System.out.println(p));
+        if (!products.isEmpty()) {
+            System.out.printf("%-10s | %-20s | %-15s | %9s | %8s | %-15s%n",
+                    "ProductID", "Name", "Category", "Price", "Quantity", "Supplier");
+            System.out.println("--------------------------------------------------------------------------------------------");
+            products.forEach(p -> System.out.println(p));
+        }
+        else
+            System.out.println("No Products Added yet!");
     }
 
     //returns number of products

@@ -33,7 +33,7 @@ public class VectorComparisonDemo {
         //Measure time to random access
         Random rand = new Random();
         long startVectorAccess = System.nanoTime();
-        for (int i=0; i<randomAccess; i++) vecProducts.get(rand.nextInt(addProducts));
+        for (int i = 0; i < randomAccess; i++) vecProducts.get(rand.nextInt(addProducts));
         long endVectorAccess = System.nanoTime();
 
         long startArrayListAccess = System.nanoTime();
@@ -46,7 +46,7 @@ public class VectorComparisonDemo {
         runtime.gc(); //Make memory calculation more accurate by collecting garbage
         long vecMemoryBefore = runtime.totalMemory() - runtime.freeMemory();
         Vector<Product> memoryVec = new Vector<>();
-        for(Product product:products) memoryVec.add(product);
+        for (Product product : products) memoryVec.add(product);
         runtime.gc();
         long vecMemoryAfter = runtime.totalMemory() - runtime.freeMemory();
         long vecMemoryUsed = vecMemoryAfter - vecMemoryBefore;
@@ -54,7 +54,7 @@ public class VectorComparisonDemo {
         runtime.gc();
         long arrlistMemoryBefore = runtime.totalMemory() - runtime.freeMemory();
         ArrayList<Product> memoryArrlist = new ArrayList<>();
-        for(Product product:products) memoryArrlist.add(product);
+        for (Product product : products) memoryArrlist.add(product);
         runtime.gc();
         long arrlistMemoryAfter = runtime.totalMemory() - runtime.freeMemory();
         long arrlistMemoryUsed = arrlistMemoryAfter - arrlistMemoryBefore;
@@ -63,11 +63,11 @@ public class VectorComparisonDemo {
         System.out.println("==== Vector vs ArrayList Performance Comparison ====");
         System.out.println("Time to add 10,000 products");
         System.out.println("Vector: " + (endVectorAdd - startVectorAdd) + " ns");
-        System.out.println("ArrayList: " + (endArrayAdd - startArrayAdd)  + " ns");
+        System.out.println("ArrayList: " + (endArrayAdd - startArrayAdd) + " ns");
 
         System.out.println("\nTime to access 1,000 random elements");
         System.out.println("Vector: " + (endVectorAccess - startVectorAccess) + " ns");
-        System.out.println("ArrayList: " + (endArrayListAccess - startArrayListAccess)  + " ns");
+        System.out.println("ArrayList: " + (endArrayListAccess - startArrayListAccess) + " ns");
 
         System.out.println("\nApprox memory usage for storing 10,000 products");
         System.out.println("Vector: " + vecMemoryUsed / 1024 + " KB");
