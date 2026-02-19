@@ -7,7 +7,7 @@ This Java project implements an **Inventory Management System** using **Vectors*
 ## ⚙️ How to Compile & Run
 
 **Compile all Java files:**
-Run InventoryManagmentMain.java
+Run InventorySystemMain.java
 
 ---
 
