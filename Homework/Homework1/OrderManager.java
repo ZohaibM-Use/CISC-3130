@@ -30,7 +30,6 @@ public class OrderManager {
     //returns orders with specific status
     Vector<Order> getOrdersByStatus(String status){
         Vector<Order> statusOrders = new Vector<>();
-
         for (Order order: orders){
             if (order.getOrderStatus().equalsIgnoreCase(status)){
                 statusOrders.add(order);
@@ -77,7 +76,10 @@ public class OrderManager {
 
     //prints all orders
     void printAllOrders(){
-        for (Order order: orders) order.printOrder();
+        if(!orders.isEmpty())
+            for (Order order: orders) order.printOrder();
+        else
+            System.out.println("No Orders Created!");
     }
 
     //returns pending orders

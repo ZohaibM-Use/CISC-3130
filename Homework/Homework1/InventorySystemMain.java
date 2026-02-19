@@ -279,18 +279,53 @@ public class InventorySystemMain {
                     break;
                 case 2:
                     Vector<Order> pendingOrders = orderManager.getPendingOrders();
-                    for (Order order : pendingOrders) order.printOrder();
+                    if (!pendingOrders.isEmpty())
+                        for (Order order : pendingOrders) order.printOrder();
+                    else
+                        System.out.println("No Pending Orders!");
                     break;
                 case 3:
-                    System.out.print("Enter a status to view " +
-                            "(Pending, Processing, Shipped, Delivered, Cancelled): ");
-                    Vector<Order> statusOrders = orderManager.getOrdersByStatus(sc.nextLine());
-                    for (Order order : statusOrders) order.printOrder();
+                    String[] validStatuses = {"Pending", "Processing", "Shipped", "Delivered", "Cancelled"};
+                    boolean validStatus = false;
+                    String stat;
+
+                    do {
+                        System.out.print("Enter a status to view (Pending, Processing, Shipped, Delivered, Cancelled): ");
+                        stat = sc.nextLine().trim();
+
+                        validStatus = false;
+
+                        for (String status : validStatuses) {
+                            if (status.equalsIgnoreCase(stat)) {
+                                validStatus = true;
+                                stat = status;
+                                break;
+                            }
+                        }
+
+                        if (!validStatus) {
+                            System.out.println("Invalid Status. Please enter a valid status.");
+                        }
+
+                    } while (!validStatus);
+
+                    Vector<Order> statusOrders = orderManager.getOrdersByStatus(stat);
+
+                    if (!statusOrders.isEmpty()) {
+                        for (Order order : statusOrders) {
+                            order.printOrder();
+                        }
+                    } else {
+                        System.out.println("No Orders for that status!");
+                    }
                     break;
                 case 4:
                     System.out.print("Enter Customer Name: ");
                     Vector<Order> customerOrders = orderManager.getOrdersByCustomer(sc.nextLine());
-                    for (Order order : customerOrders) order.printOrder();
+                    if (!customerOrders.isEmpty())
+                        for (Order order : customerOrders) order.printOrder();
+                    else
+                        System.out.println("No Orders for that customer!");
                     break;
                 default:
                     System.out.println("Invalid Option.");
