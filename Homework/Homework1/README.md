@@ -2,6 +2,8 @@
 
 This Java project implements an **Inventory Management System** using **Vectors** and **Generics**. It allows users to manage products, create and process orders, and generate reports. The project emphasizes dynamic arrays (Vectors) and reusable generic methods.
 
+[Project Overview](https://www.example.com/video.mp4)
+
 ---
 
 ## ⚙️ How to Compile & Run
