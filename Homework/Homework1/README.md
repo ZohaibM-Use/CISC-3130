@@ -74,3 +74,21 @@ Compares **Vector** and **ArrayList** performance:
 - Demonstrates synchronization overhead of Vectors
 
 ---
+
+## 🎓 Lessons Learned
+
+### Vectors
+- Dynamic arrays, thread-safe, synchronized  
+- Legacy features like `Enumeration` exist but `Iterator` is preferred  
+- Useful methods: `add`, `get`, `remove`, `size`, `capacity`  
+
+### Generics
+- Reusable, type-safe methods and containers  
+- Prevent runtime type errors  
+- Simplifies collection operations like `swap`, `filter`, `sumNumbers`, `averageNumbers`  
+
+### Overall
+- Strong experience in object-oriented design  
+- Deeper understanding of Java collections and generics  
+- Awareness of performance trade-offs between `Vector` and `ArrayList`  
+
