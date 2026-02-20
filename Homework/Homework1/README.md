@@ -4,7 +4,7 @@ This Java project implements an **Inventory Management System** using **Vectors*
 
 ![Java](https://img.shields.io/badge/JAVA-ED8B00)
 
-[Project Overview](https://www.example.com/video.mp4)
+[Project Demo](https://www.loom.com/share/e244dec773be460e8b99f3d16d04687f)
 
 ---
 
