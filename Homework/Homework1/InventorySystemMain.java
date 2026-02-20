@@ -141,7 +141,6 @@ public class InventorySystemMain {
 
                         System.out.print("Keep Looking? (Y/N)");
                         keepLooking = sc.nextLine().equalsIgnoreCase("y");
-                        sc.nextLine();
                     } while (keepLooking);
                     break;
                 case 2:
@@ -154,7 +153,6 @@ public class InventorySystemMain {
 
                         System.out.println("Search for another category? (Y/N): ");
                         keepLooking = sc.nextLine().equalsIgnoreCase("y");
-                        sc.nextLine();
                     } while (keepLooking);
                     break;
                 case 3:
@@ -175,7 +173,6 @@ public class InventorySystemMain {
                         }
                         System.out.println("Enter another threshold? (Y/N): ");
                         keepLooking = sc.nextLine().equalsIgnoreCase("y");
-                        sc.nextLine();
                     } while (keepLooking);
                     break;
                 default:
