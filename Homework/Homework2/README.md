@@ -5,6 +5,8 @@ This project is a Java-based Student Course Management System designed to manage
 
 The program demonstrates object-oriented programming, custom data structures, and Java generics.
 
+![Java](https://img.shields.io/badge/JAVA-ED8B00)
+
 ---
 
 ## ⚙️ How to Compile & Run
