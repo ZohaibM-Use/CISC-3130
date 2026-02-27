@@ -1,6 +1,5 @@
 package Homework.Homework2;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
