@@ -1,4 +1,4 @@
-# Student Course Management System
+# ArrayList-Based Student Management System
 
 ## Overview
 This project is a Java-based Student Course Management System designed to manage students, courses, and enrollments. The system allows users to perform operations such as adding students and courses, enrolling students, assigning grades, calculating GPA, and generating reports.
