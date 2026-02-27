@@ -7,6 +7,13 @@ The program demonstrates object-oriented programming, custom data structures, an
 
 ---
 
+## ⚙️ How to Compile & Run
+
+**Compile all Java files:**
+Run InventorySystemMain.java
+
+---
+
 ## 📂 Classes Description
 
 ### **Student**
@@ -135,6 +142,3 @@ Provides a menu-driven interface.
 
 ---
 
-## ▶️ How to Compile and Run
-
-### **Compile**
