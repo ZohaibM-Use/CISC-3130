@@ -7,7 +7,7 @@ The program demonstrates object-oriented programming, custom data structures, an
 
 ---
 
-## 🧩 Classes Description
+## 📂 Classes Description
 
 ### **Student**
 Represents a student in the system.
@@ -63,6 +63,7 @@ Handles enrollment logic.
   - Assign grades
   - Calculate GPA
   - Retrieve enrollments by student or course
+  - Middle-Man class that relates Students and Courses
 
 ---
 
@@ -125,7 +126,7 @@ Generates reports for students and courses.
 
 ---
 
-### **Main Application**
+### **StudentManagementSystemMain**
 Provides a menu-driven interface.
 - Responsibilities:
   - Handle user input
@@ -137,6 +138,3 @@ Provides a menu-driven interface.
 ## ▶️ How to Compile and Run
 
 ### **Compile**
-If using packages:
-```bash
-javac -d . *.java
