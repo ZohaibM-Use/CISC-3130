@@ -1,4 +1,4 @@
-# Learning Linked Lists
+# Lab: Learning Linked Lists
 
 ## Overview
 
