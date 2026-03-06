@@ -1,4 +1,4 @@
-# Week 6 Lab: Pirate Crew 
+# Pirate Crew 
 
 ## Setup
 
