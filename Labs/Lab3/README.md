@@ -1,4 +1,4 @@
-# Pirate Crew 
+# Lab: Pirate Crew 
 
 ## Setup
 
